@@ -1,1 +1,27 @@
-<h1>{{title}}</h1>
+  <div> 
+    <ul>
+    <li *ngFor="let student of students;let i = index"> 
+    {{i}}:
+    {{student.firstname}} 
+    {{student.lastname}}
+    <button (click)="onRemoveStudent(i)">Entfernen</button>
+    </li>
+    </ul>
+    <button (click)="onAddStudent()">Hinzufügen!</button>  
+  </div>
+  <hr>
+  <div>
+    <input type="text" (keyup)="onInputChange($event.target.value)" />
+    <p *ngIf="inputValue != '' ">ImEingabefeld steht folgender Text: {{inputValue}} </p>
+  </div>
+  <hr> 
+  <div>
+    <button *ngIf="!counterRunning" (click)="onStartCounter()">Counter starten!</button>
+    <p >{{currentTime}}</p>
+    <button *ngIf="counterRunning" (click)="onStopCounter()">Counter stoppen!</button>
+    <button (click)="onRemoveCounter()">Counter zurücksetzen!</button>
+  </div>
+  <hr>
+  <div>
+    
+  </div>
