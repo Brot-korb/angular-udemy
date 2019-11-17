@@ -26,6 +26,7 @@ export class TimerComponent implements OnInit {
      clearInterval(this.durationInterval);
    }
 
+
   ngOnInit() {
   }
 
