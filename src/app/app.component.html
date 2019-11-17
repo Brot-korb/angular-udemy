@@ -22,6 +22,16 @@
     <button (click)="onRemoveCounter()">Counter zurücksetzen!</button>
   </div>
   <hr>
-  <div>
-    
+
+  <!-- Ein Component selbst bauen und von Außern Parameter übergeben -->
+
+  <div *ngFor="let card of cards">
+    <app-card title="{{card.title}}" [date]="card.date"></app-card>    
   </div>
+  <hr>
+
+  <!-- Timer -->
+<div>
+  <app-timer [duration]="timerDuration" <!-- (finish)="onTimerFinish()" -->></app-timer>
+  <button (click)="onStopTimer()">Stoppe Timer!</button>
+</div>

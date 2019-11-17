@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
+import { TimerComponent } from './timer/timer.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, CardComponent ],
+  declarations: [ AppComponent, CardComponent, TimerComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

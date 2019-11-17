@@ -61,8 +61,24 @@ export class AppComponent  {
 
     /*Components*/
 
-    <app-card></app-card>
+  cards = [
+    {
+      title: "Alpha",
+      date: new Date(2020, 1, 1)
+    },
+    {
+      title: "Betta",
+      date: new Date(2019, 1, 1)
+    },
+      ]
 
+      /* Timer */
+
+      timerDuration = 20;
+
+      onTimerFinish() {
+        alert("Alpha");
+      }
 
   
 }
